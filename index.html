@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta property="og:image" content="icon.png">
+<title>SUL — واجهة التلفزيون</title>
+<meta name="description" content="SUL واجهة لتلفزيونات وبوكسات أندرويد: تطبيقاتك، مشغّل IPTV، مدير ملفات، ومثبّت تطبيقات بكود Downloader.">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0b0a19; --panel: #16142b; --panel2: #1d1a38; --line: #322b63;
+    --text: #f1efff; --mute: #aaa4cc; --accent: #a874ff; --accent2: #7c3aed; --ok: #4ade80; --warn: #fbbf24;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, "Segoe UI", Tahoma, "Noto Sans Arabic", sans-serif; line-height: 1.7; }
+  a { color: var(--accent); }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+  header.hero { padding: 56px 0 36px; background: radial-gradient(900px 400px at 70% -10%, #3b1d7a 0%, transparent 70%); }
+  .brand { display: flex; align-items: center; gap: 16px; }
+  .logo { width: 88px; height: 88px; border-radius: 22px; display: block; box-shadow: 0 10px 40px #7c3aed66; }
+  .sub2 { font-size: 21px; font-weight: 800; margin: 26px 0 8px; color: #fff; }
+  h1 { margin: 0; font-size: 46px; line-height: 1.1; }
+  .tag { margin: 14px 0 0; font-size: 20px; color: var(--mute); max-width: 680px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 28px; font-weight: 700; font-size: 18px; text-decoration: none; color: #fff; background: linear-gradient(90deg, var(--accent2), var(--accent)); border: 2px solid transparent; outline: none; }
+  .btn.alt { background: var(--panel2); border-color: var(--line); }
+  .btn:focus, .btn:hover { border-color: #fff; }
+  section { padding: 34px 0; border-top: 1px solid #1f1b3d; }
+  h2 { font-size: 30px; margin: 0 0 6px; }
+  .lead { color: var(--mute); margin: 0 0 22px; font-size: 17px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 20px; }
+  .card p { margin: 0; color: var(--mute); font-size: 15.5px; }
+  .ic { font-size: 26px; margin-bottom: 6px; display: block; }
+  .dl { display: flex; align-items: center; gap: 16px; padding: 18px 20px; margin: 12px 0; border-radius: 18px; background: var(--panel); border: 2px solid var(--line); color: var(--text); text-decoration: none; outline: none; }
+  .dl:focus, .dl:hover { border-color: #fff; background: linear-gradient(90deg, #2b1a5c, #3a1f78); }
+  .dl .n { font-size: 22px; font-weight: 800; }
+  .dl .d { color: var(--mute); font-size: 15px; }
+  .num { flex: none; width: 48px; height: 48px; border-radius: 14px; background: var(--panel2); display: grid; place-items: center; font-weight: 800; font-size: 20px; color: var(--accent); }
+  .badge { margin-inline-start: auto; font-size: 13px; padding: 4px 10px; border-radius: 12px; background: #2a2450; color: var(--mute); white-space: nowrap; }
+  ol.steps { list-style: none; padding: 0; margin: 0; counter-reset: s; }
+  ol.steps > li { counter-increment: s; position: relative; padding: 16px 64px 16px 18px; margin: 10px 0; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; }
+  ol.steps > li::before { content: counter(s); position: absolute; right: 14px; top: 14px; width: 36px; height: 36px; border-radius: 11px; background: linear-gradient(135deg, var(--accent2), var(--accent)); display: grid; place-items: center; font-weight: 800; }
+  ol.steps b { color: #fff; }
+  code { direction: ltr; unicode-bidi: isolate; display: inline-block; background: #0f0d22; border: 1px solid var(--line); border-radius: 8px; padding: 2px 8px; font-size: 14px; color: #e9e3ff; }
+  pre { direction: ltr; text-align: left; background: #0f0d22; border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; overflow-x: auto; font-size: 14px; margin: 10px 0 0; }
+  .note { border-inline-start: 4px solid var(--warn); background: #1c1830; border-radius: 12px; padding: 12px 16px; margin: 14px 0; color: #e8e2c8; }
+  .note.ok { border-color: var(--ok); color: #d6f5e0; }
+  details { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 12px 16px; margin: 10px 0; }
+  summary { cursor: pointer; font-weight: 700; font-size: 17px; outline: none; }
+  details[open] summary { margin-bottom: 8px; }
+  details p { margin: 6px 0; color: var(--mute); }
+  footer { padding: 30px 0 46px; color: var(--mute); font-size: 14px; border-top: 1px solid #1f1b3d; }
+  @media (max-width: 600px) { h1 { font-size: 36px; } .tag { font-size: 17px; } .badge { display: none; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">
+      <img class="logo" src="icon.png" alt="شعار SUL" width="88" height="88">
+      <div><h1>SUL</h1></div>
+    </div>
+    <p class="tag">واجهة رئيسية لتلفزيونات وبوكسات أندرويد: تطبيقاتك بشكل مرتب وجميل، مشغّل IPTV ومشغّل فيديو ذكي، مدير ملفات يرسل ويستقبل، ومثبّت تطبيقات بكود Downloader. كلها بالريموت، وبالعربي والإنجليزي.</p>
+    <div class="cta">
+      <a class="btn" href="#download" autofocus>تنزيل SUL</a>
+      <a class="btn alt" href="#install">طريقة التثبيت</a>
+      <a class="btn alt" href="#features">وش يسوي</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="download">
+  <div class="wrap">
+    <h2>التنزيل</h2>
+    <p class="lead">اختر الملف بالريموت واضغط موافق، وبعد ما يخلص التنزيل اضغط «تثبيت».</p>
+    <a class="dl" href="SUL.apk" download>
+      <span class="num">1</span>
+      <span><div class="n">SUL</div><div class="d">الواجهة نفسها</div></span>
+      <span class="badge">16.5 MB</span>
+    </a>
+    <a class="dl" href="Shizuku.apk" download>
+      <span class="num">2</span>
+      <span><div class="n">Shizuku</div><div class="d">اختياري: يعطي SUL صلاحيات النظام (إغلاق التطبيقات، تفعيل زر الرئيسية، أدوات متقدمة)</div></span>
+      <span class="badge">2.6 MB</span>
+    </a>
+    <a class="dl" href="Launcher-Manager.apk" download>
+      <span class="num">3</span>
+      <span><div class="n">Launcher Manager</div><div class="d">اختياري: لتغيير الواجهة الافتراضية في الأجهزة اللي تسمح بذلك</div></span>
+      <span class="badge">1.5 MB</span>
+    </a>
+  </div>
+</section>
+
+<section id="install">
+  <div class="wrap">
+    <h2>طريقة التثبيت</h2>
+    <p class="lead">من تطبيق Downloader على التلفزيون أو البوكس، أو بنقل الملف بفلاشة.</p>
+    <ol class="steps">
+      <li><b>اسمح بتثبيت التطبيقات:</b> الإعدادات ← التطبيقات ← الأمان والقيود ← مصادر غير معروفة، وفعّل Downloader (أو مدير الملفات اللي تستخدمه).</li>
+      <li><b>نزّل SUL:</b> افتح Downloader واكتب الكود أو رابط هذي الصفحة، واختر «SUL» من قسم التنزيل، ثم «تثبيت».</li>
+      <li><b>افتح SUL:</b> يطلع لك دليل أول تشغيل يعرّفك على الواجهة، واختر اللغة (عربي أو إنجليزي).</li>
+      <li><b>خلّ زر الرئيسية يفتح SUL:</b> من إعدادات SUL ← «النظام والأداء» ← «زر الرئيسية يفتح SUL». اضغط «تفعيل الخدمة بـShizuku»، أو «فتح إعدادات إمكانية الوصول» وفعّل «SUL — زر الرئيسية». بعدها كل ما تضغط زر الرئيسية في الريموت ينفتح SUL، والضغطة المطوّلة تفتح الإعدادات السريعة مثل العادة.</li>
+      <li><b>(اختياري) Shizuku:</b> ثبّته وشغّله من التلفزيون نفسه بدون كمبيوتر (الطريقة تحت)، ثم افتح SUL ووافق على طلب الصلاحية.</li>
+    </ol>
+
+    <h3 class="sub2" id="shizuku">تشغيل Shizuku بدون كمبيوتر</h3>
+    <p class="lead">يحتاج أندرويد 11 أو أحدث. بعض الشاشات (مثل إدخال رمز الاقتران) ما توصل لها بالريموت، فاستخدم <b>ماوس</b> (بلوتوث أو سلكي بمنفذ USB) أو فعّل <b>TalkBack</b> مؤقتاً.</p>
+    <ol class="steps">
+      <li><b>فعّل خيارات المطوّر:</b> الإعدادات ← النظام ← حول ← اضغط على «إصدار نظام Android TV» (أو «رقم الإصدار») 7 مرات لين يطلع «أنت الآن مطوّر».</li>
+      <li><b>فعّل التصحيح:</b> الإعدادات ← النظام ← خيارات المطوّر ← فعّل «تصحيح أخطاء USB» و«تصحيح الأخطاء اللاسلكي» (والتلفزيون متصل بالواي فاي).</li>
+      <li><b>ابدأ الاقتران من Shizuku:</b> افتح Shizuku ← «بدء عبر تصحيح الأخطاء اللاسلكي» ← «الاقتران». يطلع إشعار من Shizuku فيه خانة لرمز الاقتران.</li>
+      <li><b>خذ رمز الاقتران:</b> ارجع لخيارات المطوّر ← «تصحيح الأخطاء اللاسلكي» ← «إقران الجهاز باستخدام رمز إقران». يطلع رمز من 6 أرقام.</li>
+      <li><b>اكتب الرمز في إشعار Shizuku:</b> افتح الإشعارات واكتب الرمز في خانة Shizuku. هنا تحتاج الماوس أو TalkBack، لأن الريموت ما يوصل لخانة الإشعار في أغلب التلفزيونات.</li>
+      <li><b>شغّل Shizuku:</b> ارجع لـShizuku واضغط «بدء». لما يصير «Shizuku قيد التشغيل» افتح SUL ← الإعدادات ← النظام والأداء ← «طلب الصلاحية» ووافق.</li>
+    </ol>
+    <div class="note ok">
+      <b>TalkBack:</b> من الإعدادات ← إمكانية الوصول ← TalkBack. يقرأ لك الشاشة ويخليك توصل لعناصر ما يوصل لها الريموت. طفّه بعد ما تخلص. <b>الماوس</b> أسهل: أي ماوس بلوتوث أو USB يطلع له مؤشر على الشاشة وتضغط فيه على أي شيء.
+    </div>
+    <div class="note">
+      <b>بعد إعادة تشغيل التلفزيون</b> يوقف Shizuku، فشغّله مرة ثانية من Shizuku ← «بدء» (ما يحتاج اقتران من جديد، بس لازم «تصحيح الأخطاء اللاسلكي» يكون مفعّل والتلفزيون على نفس الواي فاي).
+      <br>ولو عندك كمبيوتر، تقدر تشغّله بأمر وحد:
+      <pre>adb shell sh /sdcard/Android/data/moe.shizuku.privileged.api/start.sh</pre>
+    </div>
+    <div class="note">
+      <b>المفتاح يطفي لحاله في «إمكانية الوصول»؟</b> أندرويد 13 و14 يمنع تفعيل خدمات الوصول للتطبيقات المثبّتة من ملف («الإعدادات المقيّدة»)، وأندرويد TV ما فيه خيار يفكها. الحل: Shizuku وزر «تفعيل الخدمة بـShizuku»، أو هذا الأمر مرة وحدة من الكمبيوتر ثم فعّل الخدمة:
+      <pre>adb shell appops set com.sul.launcher.release ACCESS_RESTRICTED_SETTINGS allow</pre>
+    </div>
+    <div class="note">
+      <b>«حماية Google Play» رفضت التثبيت؟</b> تظهر مع التطبيقات اللي تثبّتها من ملف وفيها خدمة إمكانية وصول. اضغط «التفاصيل» ثم «التثبيت على أي حال» لو ظهرت، أو ثبّت من الكمبيوتر:
+      <pre>adb install -r SUL.apk</pre>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <h2>وش يسوي SUL</h2>
+    <p class="lead">كل شيء مصمم للريموت: تحديد واضح، أزرار كبيرة، وما تحتاج ماوس.</p>
+    <div class="grid">
+      <div class="card"><span class="ic">🏠</span><h3>واجهة رئيسية</h3><p>تطبيقاتك ومفضلتك بأكثر من تصميم (منها التصميم الملكي)، ثيمات وخطوط، ساعة وطقس ومعلومات الجهاز، وشاشة توقف بصورة وأيقونة متحركة.</p></div>
+      <div class="card"><span class="ic">📺</span><h3>مشغّل IPTV</h3><p>أضف قائمة M3U أو بيانات Xtream Codes: قنوات مباشرة، أفلام ومسلسلات، دليل البرامج، المفضلة، وتقليب القنوات بالأسهم. SUL مشغّل فقط ولا يوفّر أي محتوى.</p></div>
+      <div class="card"><span class="ic">▶️</span><h3>مشغّل ذكي</h3><p>يشغّل الروابط والملفات من أي تطبيق، يختار الجودة والصوت والترجمة، يدعم HDR، ويعرض معلومات الاتصال ويحاول يصلح البث لو علق.</p></div>
+      <div class="card"><span class="ic">📁</span><h3>مدير ملفات</h3><p>ملفات الجهاز والفلاشة: فتح، نسخ، نقل، إعادة تسمية، حذف، تحديد الكل. يرسل الملفات لجوالك أو الكمبيوتر برمز QR، ويستقبل منها على نفس الشبكة.</p></div>
+      <div class="card"><span class="ic">⬇️</span><h3>مثبّت التطبيقات</h3><p>اكتب كود Downloader أو رابط صفحة ويجيب لك ملف APK ويثبّته، مع متجر صغير للتطبيقات المعروفة.</p></div>
+      <div class="card"><span class="ic">🔘</span><h3>زر الرئيسية</h3><p>حتى لو جهازك ما يسمح بتغيير الواجهة الافتراضية، SUL يقدر ينفتح من زر الرئيسية بخدمة إمكانية الوصول، ويقدر ينفتح أول ما يشتغل الجهاز.</p></div>
+      <div class="card"><span class="ic">🧹</span><h3>أدوات النظام</h3><p>تنظيف الذاكرة والكاش، إغلاق التطبيقات، المساحة، والإعدادات السريعة من مكان واحد (بعضها يحتاج Shizuku).</p></div>
+      <div class="card"><span class="ic">🌐</span><h3>عربي وإنجليزي</h3><p>الواجهة كاملة بالعربي أو الإنجليزي، والاتجاه يتغير معها.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>أسئلة</h2>
+    <details><summary>يشتغل على أي جهاز؟</summary><p>تلفزيونات وبوكسات أندرويد TV و Google TV (أندرويد 8 وأحدث). جرّبناه على TCL و Skyworth و NVIDIA Shield و Chromecast مع Google TV.</p></details>
+    <details><summary>أحتاج Shizuku؟</summary><p>لا، SUL يشتغل بدونه. Shizuku يفتح أدوات إضافية مثل إغلاق التطبيقات وتفعيل زر الرئيسية بضغطة وحدة.</p></details>
+    <details><summary>أحتاج كمبيوتر لـShizuku؟</summary><p>لا. شغّله من التلفزيون بـ«تصحيح الأخطاء اللاسلكي» (<a href="#shizuku">الطريقة</a>). تحتاج بس ماوس أو TalkBack عشان تكتب رمز الاقتران.</p></details>
+    <details><summary>كيف أرجع لواجهة جوجل؟</summary><p>اضغط زر الرئيسية ضغطة مطوّلة، أو أطفِ «زر الرئيسية يفتح SUL» من إعدادات SUL ← النظام والأداء.</p></details>
+    <details><summary>هل SUL يجمع بياناتي؟</summary><p>لا. خدمة زر الرئيسية ما تقرأ محتوى الشاشة، بس تعرف متى تنفتح واجهة النظام عشان تفتح SUL بدالها.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">SUL • واجهة ومشغّل فقط، ولا يوفّر أي قنوات أو محتوى. Shizuku و Launcher Manager تطبيقات لمطوّريها.</div>
+</footer>
+
+</body>
+</html>
