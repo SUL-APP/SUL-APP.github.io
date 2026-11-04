@@ -54,6 +54,9 @@
   summary { cursor: pointer; font-weight: 700; font-size: 17px; outline: none; }
   details[open] summary { margin-bottom: 8px; }
   details p { margin: 6px 0; color: var(--mute); }
+  .shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 14px; }
+  .shots img { width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--line); display: block; }
+  @media (max-width: 600px) { .shots { grid-template-columns: 1fr; } }
   footer { padding: 30px 0 46px; color: var(--mute); font-size: 14px; border-top: 1px solid #1f1b3d; }
   @media (max-width: 600px) { h1 { font-size: 36px; } .tag { font-size: 17px; } .badge { display: none; } }
 </style>
@@ -92,7 +95,7 @@
     </a>
     <a class="dl" href="Launcher-Manager.apk" download>
       <span class="num">3</span>
-      <span><div class="n">Launcher Manager</div><div class="d">اختياري: لتغيير الواجهة الافتراضية في الأجهزة اللي تسمح بذلك</div></span>
+      <span><div class="n">Launcher Manager</div><div class="d">للتثبيت الكامل: يخلي SUL الواجهة الوحيدة في الجهاز بدل واجهة جوجل (<a href="#full">الطريقة</a>)</div></span>
       <span class="badge">1.5 MB</span>
     </a>
   </div>
@@ -109,6 +112,20 @@
       <li><b>خلّ زر الرئيسية يفتح SUL:</b> من إعدادات SUL ← «النظام والأداء» ← «زر الرئيسية يفتح SUL». اضغط «تفعيل الخدمة بـShizuku»، أو «فتح إعدادات إمكانية الوصول» وفعّل «SUL — زر الرئيسية». بعدها كل ما تضغط زر الرئيسية في الريموت ينفتح SUL، والضغطة المطوّلة تفتح الإعدادات السريعة مثل العادة.</li>
       <li><b>(اختياري) Shizuku:</b> ثبّته وشغّله من التلفزيون نفسه بدون كمبيوتر (الطريقة تحت)، ثم افتح SUL ووافق على طلب الصلاحية.</li>
     </ol>
+
+    <h3 class="sub2" id="full">التثبيت الكامل بـ Launcher Manager (SUL الواجهة الوحيدة)</h3>
+    <p class="lead">طريقة «زر الرئيسية يفتح SUL» تكفي أغلب الناس، بس تظهر فيها واجهة جوجل لحظة قبل SUL. لو تبي SUL يكون الواجهة الرئيسية الوحيدة بدون ما تظهر واجهة جوجل أبداً، استخدم Launcher Manager: يوقّف واجهة جوجل الأصلية ويخلي زر الرئيسية يفتح SUL مباشرة. ما يحتاج كمبيوتر.</p>
+    <ol class="steps">
+      <li><b>فعّل خيارات المطوّر:</b> الإعدادات ← النظام ← حول ← اضغط «إصدار نظام Android TV» 7 مرات.</li>
+      <li><b>فعّل «تصحيح أخطاء USB»:</b> الإعدادات ← النظام ← خيارات المطوّر ← «تصحيح أخطاء USB» (ADB).</li>
+      <li><b>ثبّت Launcher Manager وافتحه:</b> من قسم التنزيل فوق. يطلب «السماح بتصحيح الأخطاء؟»، اختر «السماح دائماً» ثم «سماح» (هو يتصل بالجهاز نفسه).</li>
+      <li><b>اختر SUL:</b> من قائمة الواجهات داخل Launcher Manager اختر «SUL».</li>
+      <li><b>«Disable Stock Launcher»:</b> يوقّف واجهة جوجل الأصلية. من الحين زر الرئيسية يفتح SUL على طول.</li>
+    </ol>
+    <div class="note">
+      <b>تبي ترجع لواجهة جوجل؟</b> افتح Launcher Manager واضغط «Enable Stock Launcher»، وكل شيء يرجع مثل ما كان.
+      <br>مع إيقاف واجهة جوجل ما تظهر بعض أشياءها (مثل الاقتراحات والملفات الشخصية في Google TV)، وما تحتاج خدمة «زر الرئيسية يفتح SUL» لأن SUL صار الواجهة نفسها.
+    </div>
 
     <h3 class="sub2" id="shizuku">تشغيل Shizuku بدون كمبيوتر</h3>
     <p class="lead">يحتاج أندرويد 11 أو أحدث. بعض الشاشات (مثل إدخال رمز الاقتران) ما توصل لها بالريموت، فاستخدم <b>ماوس</b> (بلوتوث أو سلكي بمنفذ USB) أو فعّل <b>TalkBack</b> مؤقتاً.</p>
@@ -139,6 +156,21 @@
   </div>
 </section>
 
+<section id="shots">
+  <div class="wrap">
+    <h2>صور</h2>
+    <p class="lead">من SUL على بوكس أندرويد TV.</p>
+    <div class="shots">
+      <img src="img/sul-1.jpg" alt="SUL: الواجهة الرئيسية" loading="lazy">
+      <img src="img/sul-2.jpg" alt="SUL: مشغّل IPTV" loading="lazy">
+      <img src="img/sul-3.jpg" alt="SUL: إرسال واستقبال الملفات برمز QR" loading="lazy">
+      <img src="img/sul-4.jpg" alt="SUL: أشكال الواجهة" loading="lazy">
+      <img src="img/sul-5.jpg" alt="SUL: الإعدادات السريعة" loading="lazy">
+      <img src="img/sul-6.jpg" alt="ثبّت SUL" loading="lazy">
+    </div>
+  </div>
+</section>
+
 <section id="features">
   <div class="wrap">
     <h2>وش يسوي SUL</h2>
@@ -162,7 +194,8 @@
     <details><summary>يشتغل على أي جهاز؟</summary><p>تلفزيونات وبوكسات أندرويد TV و Google TV (أندرويد 8 وأحدث). جرّبناه على TCL و Skyworth و NVIDIA Shield و Chromecast مع Google TV.</p></details>
     <details><summary>أحتاج Shizuku؟</summary><p>لا، SUL يشتغل بدونه. Shizuku يفتح أدوات إضافية مثل إغلاق التطبيقات وتفعيل زر الرئيسية بضغطة وحدة.</p></details>
     <details><summary>أحتاج كمبيوتر لـShizuku؟</summary><p>لا. شغّله من التلفزيون بـ«تصحيح الأخطاء اللاسلكي» (<a href="#shizuku">الطريقة</a>). تحتاج بس ماوس أو TalkBack عشان تكتب رمز الاقتران.</p></details>
-    <details><summary>كيف أرجع لواجهة جوجل؟</summary><p>اضغط زر الرئيسية ضغطة مطوّلة، أو أطفِ «زر الرئيسية يفتح SUL» من إعدادات SUL ← النظام والأداء.</p></details>
+    <details><summary>كيف أرجع لواجهة جوجل؟</summary><p>اضغط زر الرئيسية ضغطة مطوّلة، أو أطفِ «زر الرئيسية يفتح SUL» من إعدادات SUL ← النظام والأداء. ولو استخدمت Launcher Manager: افتحه واضغط «Enable Stock Launcher».</p></details>
+    <details><summary>وش الفرق بين «زر الرئيسية يفتح SUL» و Launcher Manager؟</summary><p>الأولى خفيفة وما تلمس واجهة جوجل، بس تظهر واجهة جوجل لحظة قبل SUL. Launcher Manager يوقّف واجهة جوجل فيصير SUL الواجهة الوحيدة، ويرجعها بضغطة.</p></details>
     <details><summary>هل SUL يجمع بياناتي؟</summary><p>لا. خدمة زر الرئيسية ما تقرأ محتوى الشاشة، بس تعرف متى تنفتح واجهة النظام عشان تفتح SUL بدالها.</p></details>
   </div>
 </section>
