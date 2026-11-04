@@ -54,6 +54,8 @@
   summary { cursor: pointer; font-weight: 700; font-size: 17px; outline: none; }
   details[open] summary { margin-bottom: 8px; }
   details p { margin: 6px 0; color: var(--mute); }
+  .code { display: inline-block; margin-top: 18px; padding: 10px 20px; border-radius: 16px; background: rgba(124,58,237,.16); border: 1px solid #5b3fb0; font-size: 19px; color: #e6dcff; }
+  .code b { direction: ltr; unicode-bidi: isolate; font-size: 26px; letter-spacing: 2px; color: #fff; margin-inline-start: 6px; }
   .shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 14px; }
   .shots img { width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--line); display: block; }
   @media (max-width: 600px) { .shots { grid-template-columns: 1fr; } }
@@ -75,6 +77,7 @@
       <a class="btn alt" href="#install">طريقة التثبيت</a>
       <a class="btn alt" href="#features">وش يسوي</a>
     </div>
+    <div class="code">كود Downloader: <b>9720997</b></div>
   </div>
 </header>
 
@@ -95,7 +98,7 @@
     </a>
     <a class="dl" href="Launcher-Manager.apk" download>
       <span class="num">3</span>
-      <span><div class="n">Launcher Manager</div><div class="d">للتثبيت الكامل: يخلي SUL الواجهة الوحيدة في الجهاز بدل واجهة جوجل (<a href="#full">الطريقة</a>)</div></span>
+      <span><div class="n">Launcher Manager</div><div class="d">للتثبيت الكامل: يخلي SUL الواجهة الوحيدة في الجهاز بدل واجهة جوجل • الطريقة تحت في «التثبيت الكامل»</div></span>
       <span class="badge">1.5 MB</span>
     </a>
   </div>
@@ -107,7 +110,7 @@
     <p class="lead">من تطبيق Downloader على التلفزيون أو البوكس، أو بنقل الملف بفلاشة.</p>
     <ol class="steps">
       <li><b>اسمح بتثبيت التطبيقات:</b> الإعدادات ← التطبيقات ← الأمان والقيود ← مصادر غير معروفة، وفعّل Downloader (أو مدير الملفات اللي تستخدمه).</li>
-      <li><b>نزّل SUL:</b> افتح Downloader واكتب الكود أو رابط هذي الصفحة، واختر «SUL» من قسم التنزيل، ثم «تثبيت».</li>
+      <li><b>نزّل SUL:</b> افتح Downloader واكتب الكود <code>9720997</code> (أو الرابط <code>sul-app.github.io</code>)، واختر «SUL» من قسم التنزيل، ثم «تثبيت».</li>
       <li><b>افتح SUL:</b> يطلع لك دليل أول تشغيل يعرّفك على الواجهة، واختر اللغة (عربي أو إنجليزي).</li>
       <li><b>خلّ زر الرئيسية يفتح SUL:</b> من إعدادات SUL ← «النظام والأداء» ← «زر الرئيسية يفتح SUL». اضغط «تفعيل الخدمة بـShizuku»، أو «فتح إعدادات إمكانية الوصول» وفعّل «SUL — زر الرئيسية». بعدها كل ما تضغط زر الرئيسية في الريموت ينفتح SUL، والضغطة المطوّلة تفتح الإعدادات السريعة مثل العادة.</li>
       <li><b>(اختياري) Shizuku:</b> ثبّته وشغّله من التلفزيون نفسه بدون كمبيوتر (الطريقة تحت)، ثم افتح SUL ووافق على طلب الصلاحية.</li>
