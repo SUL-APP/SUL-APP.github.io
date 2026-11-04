@@ -61,6 +61,10 @@
   @media (max-width: 600px) { .shots { grid-template-columns: 1fr; } }
   footer { padding: 30px 0 46px; color: var(--mute); font-size: 14px; border-top: 1px solid #1f1b3d; }
   @media (max-width: 600px) { h1 { font-size: 36px; } .tag { font-size: 17px; } .badge { display: none; } }
+  .part { display: flex; align-items: center; gap: 14px; font-size: 34px; font-weight: 800; margin: 0 0 10px; }
+  .part .pn { width: 52px; height: 52px; border-radius: 15px; display: grid; place-items: center; font-size: 26px; background: linear-gradient(135deg, var(--accent2), var(--accent)); box-shadow: 0 8px 24px #7c3aed55; }
+  #sul { border-top: none; }
+  #iptv { border-top: 3px solid #2a2350; margin-top: 10px; }
 </style>
 </head>
 <body>
@@ -71,86 +75,65 @@
       <img class="logo" src="icon.png" alt="شعار SUL" width="88" height="88">
       <div><h1>SUL</h1></div>
     </div>
-    <p class="tag">واجهة رئيسية لتلفزيونات وبوكسات أندرويد: تطبيقاتك بشكل مرتب وجميل، مشغّل IPTV ومشغّل فيديو ذكي، مدير ملفات يرسل ويستقبل، ومثبّت تطبيقات بكود Downloader. كلها بالريموت، وبالعربي والإنجليزي.</p>
+    <p class="tag">واجهة رئيسية لتلفزيونات وبوكسات أندرويد، ومعها SUL IPTV مشغّل IPTV مستقل للجوال والتلفزيون. كلها بالريموت أو باللمس، وبالعربي والإنجليزي.</p>
     <div class="cta">
-      <a class="btn" href="#download" autofocus>تنزيل SUL</a>
-      <a class="btn alt" href="#install">طريقة التثبيت</a>
-      <a class="btn alt" href="#features">وش يسوي</a>
+      <a class="btn" href="#sul" autofocus>SUL للتلفزيون</a>
+      <a class="btn alt" href="#iptv">SUL IPTV للجوال والتلفزيون</a>
+      <a class="btn alt" href="#faq">أسئلة</a>
     </div>
     <div class="code">كود Downloader: <b>9720997</b></div>
   </div>
 </header>
 
 <main>
-<section id="download">
+<section id="sul">
   <div class="wrap">
-    <h2>التنزيل</h2>
+  <div class="part"><span class="pn">1</span>SUL • واجهة التلفزيون</div>
+    <p class="lead">واجهة رئيسية لتلفزيونات وبوكسات أندرويد: تطبيقاتك بشكل مرتب وجميل، مشغّل IPTV ومشغّل فيديو ذكي، مدير ملفات يرسل ويستقبل، ومثبّت تطبيقات بكود Downloader.</p>
+    <div class="shots">
+      <img src="img/sul-1.jpg" alt="SUL: الواجهة الرئيسية" loading="lazy">
+      <img src="img/sul-2.jpg" alt="SUL: مشغّل IPTV" loading="lazy">
+      <img src="img/sul-3.jpg" alt="SUL: إرسال واستقبال الملفات برمز QR" loading="lazy">
+      <img src="img/sul-4.jpg" alt="SUL: أشكال الواجهة" loading="lazy">
+      <img src="img/sul-5.jpg" alt="SUL: الإعدادات السريعة" loading="lazy">
+      <img src="img/sul-6.jpg" alt="ثبّت SUL" loading="lazy">
+    </div>
+
+    <h3 class="sub2">وش يسوي SUL</h3>
+    <div class="grid">
+      <div class="card"><span class="ic">🏠</span><h3>واجهة رئيسية</h3><p>تطبيقاتك ومفضلتك بأكثر من تصميم (منها التصميم الملكي)، ثيمات وخطوط، ساعة وطقس ومعلومات الجهاز، وشاشة توقف بصورة وأيقونة متحركة.</p></div>
+      <div class="card"><span class="ic">📺</span><h3>مشغّل IPTV</h3><p>أضف قائمة M3U أو بيانات Xtream Codes: قنوات مباشرة، أفلام ومسلسلات، دليل البرامج، المفضلة، وتقليب القنوات بالأسهم. SUL مشغّل فقط ولا يوفّر أي محتوى.</p></div>
+      <div class="card"><span class="ic">▶️</span><h3>مشغّل ذكي</h3><p>يشغّل الروابط والملفات من أي تطبيق، يختار الجودة والصوت والترجمة، يدعم HDR، ويعرض معلومات الاتصال ويحاول يصلح البث لو علق.</p></div>
+      <div class="card"><span class="ic">📁</span><h3>مدير ملفات</h3><p>ملفات الجهاز والفلاشة: فتح، نسخ، نقل، إعادة تسمية، حذف، تحديد الكل. يرسل الملفات لجوالك أو الكمبيوتر برمز QR، ويستقبل منها على نفس الشبكة.</p></div>
+      <div class="card"><span class="ic">⬇️</span><h3>مثبّت التطبيقات</h3><p>اكتب كود Downloader أو رابط صفحة ويجيب لك ملف APK ويثبّته، مع متجر صغير للتطبيقات المعروفة.</p></div>
+      <div class="card"><span class="ic">🔘</span><h3>زر الرئيسية</h3><p>حتى لو جهازك ما يسمح بتغيير الواجهة الافتراضية، SUL يقدر ينفتح من زر الرئيسية بخدمة إمكانية الوصول، ويقدر ينفتح أول ما يشتغل الجهاز.</p></div>
+      <div class="card"><span class="ic">🧹</span><h3>أدوات النظام</h3><p>تنظيف الذاكرة والكاش، إغلاق التطبيقات، المساحة، والإعدادات السريعة من مكان واحد (بعضها يحتاج Shizuku).</p></div>
+      <div class="card"><span class="ic">🌐</span><h3>عربي وإنجليزي</h3><p>الواجهة كاملة بالعربي أو الإنجليزي، والاتجاه يتغير معها.</p></div>
+    </div>
+
+    <h3 class="sub2" id="download">تنزيل SUL</h3>
     <p class="lead">اختر الملف بالريموت واضغط موافق، وبعد ما يخلص التنزيل اضغط «تثبيت».</p>
     <a class="dl" href="SUL.apk" download>
       <span class="num">1</span>
       <span><div class="n">SUL</div><div class="d">الواجهة نفسها</div></span>
       <span class="badge">16.5 MB</span>
     </a>
-    <a class="dl" href="SUL-IPTV.apk" download>
-      <span class="num">2</span>
-      <span><div class="n">SUL IPTV</div><div class="d">مشغّل IPTV لحاله للجوال والتلفزيون، ما يحتاج SUL • التفاصيل في القسم اللي تحت</div></span>
-      <span class="badge">16.4 MB</span>
-    </a>
     <a class="dl" href="Shizuku.apk" download>
-      <span class="num">3</span>
+      <span class="num">2</span>
       <span><div class="n">Shizuku</div><div class="d">اختياري: يعطي SUL صلاحيات النظام (إغلاق التطبيقات، تفعيل زر الرئيسية، أدوات متقدمة)</div></span>
       <span class="badge">2.6 MB</span>
     </a>
     <a class="dl" href="Launcher-Manager.apk" download>
-      <span class="num">4</span>
-      <span><div class="n">Launcher Manager</div><div class="d">للتثبيت الكامل: يخلي SUL الواجهة الوحيدة في الجهاز بدل واجهة جوجل • الطريقة تحت في «التثبيت الكامل»</div></span>
+      <span class="num">3</span>
+      <span><div class="n">Launcher Manager</div><div class="d">للتثبيت الكامل: يخلي SUL الواجهة الوحيدة في الجهاز بدل واجهة جوجل • الطريقة تحت</div></span>
       <span class="badge">1.5 MB</span>
     </a>
-  </div>
-</section>
 
-<section id="iptv">
-  <div class="wrap">
-    <div class="brand" style="margin-bottom:10px">
-      <img class="logo" src="icon-iptv.png" alt="شعار SUL IPTV" width="72" height="72" style="width:72px;height:72px">
-      <h2 style="margin:0">SUL IPTV</h2>
-    </div>
-    <p class="lead">تطبيق مستقل لمشغّل IPTV حق SUL: تثبّته لحاله على الجوال أو التلفزيون أو البوكس، وما يحتاج تثبيت SUL. أضف قائمتك وشغّل قنواتك وأفلامك ومسلسلاتك. SUL IPTV مشغّل فقط ولا يوفّر أي قنوات أو محتوى.</p>
-    <div class="note" id="iptvnote"><b>مشغّل فقط:</b> SUL IPTV ما يحتوي على أي قنوات أو أفلام أو اشتراكات. تضيف أنت رابط قائمتك (M3U أو Xtream) من مزوّدك، والصور هنا لتوضيح الواجهة بس.</div>
-    <a class="dl" href="SUL-IPTV.apk" download>
-      <span class="num">⬇</span>
-      <span><div class="n">تنزيل SUL IPTV</div><div class="d">أندرويد 8 وأحدث • جوال وتلفزيون</div></span>
-      <span class="badge">16.4 MB</span>
-    </a>
-    <div class="shots" style="margin-top:16px">
-      <img src="img/iptv-1.jpg" alt="SUL IPTV على التلفزيون: القنوات والأقسام" loading="lazy">
-      <img src="img/iptv-2.jpg" alt="SUL IPTV: الدقة الحقيقية حتى 4K" loading="lazy">
-      <img src="img/iptv-3.jpg" alt="SUL IPTV على الجوال: تقليب القنوات بالسحب" loading="lazy">
-      <img src="img/iptv-4.jpg" alt="SUL IPTV على الجوال بالعرضي: الدقة الحقيقية" loading="lazy">
-    </div>
-    <div class="grid" style="margin-top:16px">
-      <div class="card"><span class="ic">📋</span><h3>قوائمك كلها</h3><p>رابط M3U أو بيانات Xtream Codes، وأكثر من قائمة مع التبديل بينها. على التلفزيون تقدر تضيف القائمة من جوالك برمز QR بدل الكتابة بالريموت.</p></div>
-      <div class="card"><span class="ic">📺</span><h3>قنوات وأفلام ومسلسلات</h3><p>القنوات المباشرة بأقسامها، والأفلام والمسلسلات بالمواسم والحلقات، والمفضلة و«شوهدت مؤخراً»، والبحث.</p></div>
-      <div class="card"><span class="ic">🗓️</span><h3>دليل البرامج</h3><p>البرنامج الحالي والتالي لكل قناة، وجدول البرامج على التلفزيون، ورابط EPG مخصص لو تبي.</p></div>
-      <div class="card"><span class="ic">👆</span><h3>تقليب القنوات بالسحب</h3><p>وأنت تشاهد: اسحب لفوق للقناة التالية ولتحت للي قبلها، ولمسة وحدة تظهر معلومات القناة. وعلى التلفزيون بالأسهم.</p></div>
-      <div class="card"><span class="ic">📱</span><h3>مناسب لجوالات أندرويد</h3><p>يشتغل بالوضع الطولي والعرضي ويتعدّل على مقاس الشاشة، والمشاهدة تكمل لما تدير الجوال. أزرار رجوع وقائمة القنوات والخيارات فوق، والجودة والصوت تطلع من تحت.</p></div>
-      <div class="card"><span class="ic">🎯</span><h3>الدقة الحقيقية حتى 4K</h3><p>يبين لك دقة البث الحقيقية والترميز ونوع HDR (مثل 4K • HEVC • HDR10) وعدد الإطارات في الثانية ومعدل البت، مو بس اسم القناة. يدعم حتى 4K و HDR10 و HLG.</p></div>
-      <div class="card"><span class="ic">⚙️</span><h3>الجودة والصوت والترجمة</h3><p>اختر جودة البث من الجودات المتوفرة، ومسار الصوت، والترجمة، ونسبة العرض.</p></div>
-      <div class="card"><span class="ic">📶</span><h3>معلومات الاتصال</h3><p>سرعة الاستقبال والإرسال وزمن الاستجابة ومعدل البت والإطارات وقت المشاهدة، وتنبيه لو الاتصال ما يكفي.</p></div>
-      <div class="card"><span class="ic">🧪</span><h3>إصلاح الاتصال (تجريبي)</h3><p>لو علقت القناة يحاول يصلحها تلقائياً بخطوات: تغيير DNS، وتنشيط الاتصال، وإعادة الاتصال بجودة مرنة. الميزة تجريبية وتقدر تطفيها من الإعدادات.</p></div>
-      <div class="card"><span class="ic">🔒</span><h3>قفل وترتيب</h3><p>اقفل أي قسم برمز سري، ورتّب القنوات والأقسام على ذوقك.</p></div>
-      <div class="card"><span class="ic">🌐</span><h3>عربي وإنجليزي</h3><p>الواجهة كاملة بالعربي أو الإنجليزي، وتشتغل بالريموت وباللمس.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="install">
-  <div class="wrap">
-    <h2>طريقة التثبيت</h2>
+    <h3 class="sub2" id="install">طريقة تثبيت SUL</h3>
     <p class="lead">من تطبيق Downloader على التلفزيون أو البوكس، أو بنقل الملف بفلاشة.</p>
     <ol class="steps">
       <li><b>اسمح بتثبيت التطبيقات:</b> الإعدادات ← التطبيقات ← الأمان والقيود ← مصادر غير معروفة، وفعّل Downloader (أو مدير الملفات اللي تستخدمه).</li>
-      <li><b>نزّل SUL:</b> افتح Downloader واكتب الكود <code>9720997</code> (أو الرابط <code>sul-app.github.io</code>)، واختر «SUL» من قسم التنزيل، ثم «تثبيت».</li>
+      <li><b>نزّل SUL:</b> افتح Downloader واكتب الكود <code>9720997</code> (أو الرابط <code>sul-app.github.io</code>)، واختر «SUL»، ثم «تثبيت».</li>
       <li><b>افتح SUL:</b> يطلع لك دليل أول تشغيل يعرّفك على الواجهة، واختر اللغة (عربي أو إنجليزي).</li>
       <li><b>خلّ زر الرئيسية يفتح SUL:</b> من إعدادات SUL ← «النظام والأداء» ← «زر الرئيسية يفتح SUL». اضغط «تفعيل الخدمة بـShizuku»، أو «فتح إعدادات إمكانية الوصول» وفعّل «SUL — زر الرئيسية». بعدها كل ما تضغط زر الرئيسية في الريموت ينفتح SUL، والضغطة المطوّلة تفتح الإعدادات السريعة مثل العادة.</li>
       <li><b>(اختياري) Shizuku:</b> ثبّته وشغّله من التلفزيون نفسه بدون كمبيوتر (الطريقة تحت)، ثم افتح SUL ووافق على طلب الصلاحية.</li>
@@ -161,7 +144,7 @@
     <ol class="steps">
       <li><b>فعّل خيارات المطوّر:</b> الإعدادات ← النظام ← حول ← اضغط «إصدار نظام Android TV» 7 مرات.</li>
       <li><b>فعّل «تصحيح أخطاء USB»:</b> الإعدادات ← النظام ← خيارات المطوّر ← «تصحيح أخطاء USB» (ADB).</li>
-      <li><b>ثبّت Launcher Manager وافتحه:</b> من قسم التنزيل فوق. يطلب «السماح بتصحيح الأخطاء؟»، اختر «السماح دائماً» ثم «سماح» (هو يتصل بالجهاز نفسه).</li>
+      <li><b>ثبّت Launcher Manager وافتحه:</b> من التنزيل فوق. يطلب «السماح بتصحيح الأخطاء؟»، اختر «السماح دائماً» ثم «سماح» (هو يتصل بالجهاز نفسه).</li>
       <li><b>اختر SUL:</b> في Launcher Manager ادخل «Launcher Options» ← «Custom Launcher Options» واختر «SUL» من القائمة.</li>
       <li><b>«Enable Custom Launcher»:</b> يفعّل SUL كواجهة للجهاز بدل واجهة جوجل. من الحين زر الرئيسية يفتح SUL على طول.</li>
     </ol>
@@ -199,35 +182,49 @@
   </div>
 </section>
 
-<section id="shots">
+<section id="iptv">
   <div class="wrap">
-    <h2>صور</h2>
-    <p class="lead">من SUL على بوكس أندرويد TV.</p>
-    <div class="shots">
-      <img src="img/sul-1.jpg" alt="SUL: الواجهة الرئيسية" loading="lazy">
-      <img src="img/sul-2.jpg" alt="SUL: مشغّل IPTV" loading="lazy">
-      <img src="img/sul-3.jpg" alt="SUL: إرسال واستقبال الملفات برمز QR" loading="lazy">
-      <img src="img/sul-4.jpg" alt="SUL: أشكال الواجهة" loading="lazy">
-      <img src="img/sul-5.jpg" alt="SUL: الإعدادات السريعة" loading="lazy">
-      <img src="img/sul-6.jpg" alt="ثبّت SUL" loading="lazy">
+  <div class="part"><span class="pn">2</span>SUL IPTV • للجوال والتلفزيون</div>
+    <div class="brand" style="margin-bottom:10px">
+      <img class="logo" src="icon-iptv.png" alt="شعار SUL IPTV" width="72" height="72" style="width:72px;height:72px">
+      <h3 style="margin:0;font-size:22px">مشغّل IPTV مستقل • ما يحتاج SUL</h3>
     </div>
-  </div>
-</section>
+    <p class="lead">تطبيق مستقل لمشغّل IPTV حق SUL: تثبّته لحاله على الجوال أو التلفزيون أو البوكس، وما يحتاج تثبيت SUL. أضف قائمتك وشغّل قنواتك وأفلامك ومسلسلاتك. SUL IPTV مشغّل فقط ولا يوفّر أي قنوات أو محتوى.</p>
+    <div class="note" id="iptvnote"><b>مشغّل فقط:</b> SUL IPTV ما يحتوي على أي قنوات أو أفلام أو اشتراكات. تضيف أنت رابط قائمتك (M3U أو Xtream) من مزوّدك، والصور هنا لتوضيح الواجهة بس.</div>
+    <div class="shots" style="margin-top:16px">
+      <img src="img/iptv-1.jpg" alt="SUL IPTV على التلفزيون: القنوات والأقسام" loading="lazy">
+      <img src="img/iptv-2.jpg" alt="SUL IPTV: الدقة الحقيقية حتى 4K" loading="lazy">
+      <img src="img/iptv-3.jpg" alt="SUL IPTV على الجوال: تقليب القنوات بالسحب" loading="lazy">
+      <img src="img/iptv-4.jpg" alt="SUL IPTV على الجوال بالعرضي: الدقة الحقيقية" loading="lazy">
+    </div>
+    <h3 class="sub2">وش يسوي SUL IPTV</h3>
+    <div class="grid" style="margin-top:16px">
+      <div class="card"><span class="ic">📋</span><h3>قوائمك كلها</h3><p>رابط M3U أو بيانات Xtream Codes، وأكثر من قائمة مع التبديل بينها. على التلفزيون تقدر تضيف القائمة من جوالك برمز QR بدل الكتابة بالريموت.</p></div>
+      <div class="card"><span class="ic">📺</span><h3>قنوات وأفلام ومسلسلات</h3><p>القنوات المباشرة بأقسامها، والأفلام والمسلسلات بالمواسم والحلقات، والمفضلة و«شوهدت مؤخراً»، والبحث.</p></div>
+      <div class="card"><span class="ic">🗓️</span><h3>دليل البرامج</h3><p>البرنامج الحالي والتالي لكل قناة، وجدول البرامج على التلفزيون، ورابط EPG مخصص لو تبي.</p></div>
+      <div class="card"><span class="ic">👆</span><h3>تقليب القنوات بالسحب</h3><p>وأنت تشاهد: اسحب لفوق للقناة التالية ولتحت للي قبلها، ولمسة وحدة تظهر معلومات القناة. وعلى التلفزيون بالأسهم.</p></div>
+      <div class="card"><span class="ic">📱</span><h3>مناسب لجوالات أندرويد</h3><p>يشتغل بالوضع الطولي والعرضي ويتعدّل على مقاس الشاشة، والمشاهدة تكمل لما تدير الجوال. أزرار رجوع وقائمة القنوات والخيارات فوق، والجودة والصوت تطلع من تحت.</p></div>
+      <div class="card"><span class="ic">🎯</span><h3>الدقة الحقيقية حتى 4K</h3><p>يبين لك دقة البث الحقيقية والترميز ونوع HDR (مثل 4K • HEVC • HDR10) وعدد الإطارات في الثانية ومعدل البت، مو بس اسم القناة. يدعم حتى 4K و HDR10 و HLG.</p></div>
+      <div class="card"><span class="ic">⚙️</span><h3>الجودة والصوت والترجمة</h3><p>اختر جودة البث من الجودات المتوفرة، ومسار الصوت، والترجمة، ونسبة العرض.</p></div>
+      <div class="card"><span class="ic">📶</span><h3>معلومات الاتصال</h3><p>سرعة الاستقبال والإرسال وزمن الاستجابة ومعدل البت والإطارات وقت المشاهدة، وتنبيه لو الاتصال ما يكفي.</p></div>
+      <div class="card"><span class="ic">🧪</span><h3>إصلاح الاتصال (تجريبي)</h3><p>لو علقت القناة يحاول يصلحها تلقائياً بخطوات: تغيير DNS، وتنشيط الاتصال، وإعادة الاتصال بجودة مرنة. الميزة تجريبية وتقدر تطفيها من الإعدادات.</p></div>
+      <div class="card"><span class="ic">🔒</span><h3>قفل وترتيب</h3><p>اقفل أي قسم برمز سري، ورتّب القنوات والأقسام على ذوقك.</p></div>
+      <div class="card"><span class="ic">🌐</span><h3>عربي وإنجليزي</h3><p>الواجهة كاملة بالعربي أو الإنجليزي، وتشتغل بالريموت وباللمس.</p></div>
+    </div>
 
-<section id="features">
-  <div class="wrap">
-    <h2>وش يسوي SUL</h2>
-    <p class="lead">كل شيء مصمم للريموت: تحديد واضح، أزرار كبيرة، وما تحتاج ماوس.</p>
-    <div class="grid">
-      <div class="card"><span class="ic">🏠</span><h3>واجهة رئيسية</h3><p>تطبيقاتك ومفضلتك بأكثر من تصميم (منها التصميم الملكي)، ثيمات وخطوط، ساعة وطقس ومعلومات الجهاز، وشاشة توقف بصورة وأيقونة متحركة.</p></div>
-      <div class="card"><span class="ic">📺</span><h3>مشغّل IPTV</h3><p>أضف قائمة M3U أو بيانات Xtream Codes: قنوات مباشرة، أفلام ومسلسلات، دليل البرامج، المفضلة، وتقليب القنوات بالأسهم. SUL مشغّل فقط ولا يوفّر أي محتوى.</p></div>
-      <div class="card"><span class="ic">▶️</span><h3>مشغّل ذكي</h3><p>يشغّل الروابط والملفات من أي تطبيق، يختار الجودة والصوت والترجمة، يدعم HDR، ويعرض معلومات الاتصال ويحاول يصلح البث لو علق.</p></div>
-      <div class="card"><span class="ic">📁</span><h3>مدير ملفات</h3><p>ملفات الجهاز والفلاشة: فتح، نسخ، نقل، إعادة تسمية، حذف، تحديد الكل. يرسل الملفات لجوالك أو الكمبيوتر برمز QR، ويستقبل منها على نفس الشبكة.</p></div>
-      <div class="card"><span class="ic">⬇️</span><h3>مثبّت التطبيقات</h3><p>اكتب كود Downloader أو رابط صفحة ويجيب لك ملف APK ويثبّته، مع متجر صغير للتطبيقات المعروفة.</p></div>
-      <div class="card"><span class="ic">🔘</span><h3>زر الرئيسية</h3><p>حتى لو جهازك ما يسمح بتغيير الواجهة الافتراضية، SUL يقدر ينفتح من زر الرئيسية بخدمة إمكانية الوصول، ويقدر ينفتح أول ما يشتغل الجهاز.</p></div>
-      <div class="card"><span class="ic">🧹</span><h3>أدوات النظام</h3><p>تنظيف الذاكرة والكاش، إغلاق التطبيقات، المساحة، والإعدادات السريعة من مكان واحد (بعضها يحتاج Shizuku).</p></div>
-      <div class="card"><span class="ic">🌐</span><h3>عربي وإنجليزي</h3><p>الواجهة كاملة بالعربي أو الإنجليزي، والاتجاه يتغير معها.</p></div>
-    </div>
+    <h3 class="sub2" id="iptv-download">تنزيل SUL IPTV</h3>
+    <a class="dl" href="SUL-IPTV.apk" download>
+      <span class="num">1</span>
+      <span><div class="n">تنزيل SUL IPTV</div><div class="d">أندرويد 8 وأحدث • جوال وتلفزيون</div></span>
+      <span class="badge">16.4 MB</span>
+    </a>
+
+    <h3 class="sub2">طريقة تثبيت SUL IPTV</h3>
+    <ol class="steps">
+      <li><b>على الجوال:</b> افتح <code>sul-app.github.io</code> من المتصفح ونزّل «SUL IPTV»، وافتح الملف واضغط «تثبيت» (لو طلب، اسمح للمتصفح بتثبيت التطبيقات).</li>
+      <li><b>على التلفزيون أو البوكس:</b> من Downloader اكتب الكود <code>9720997</code> واختر «SUL IPTV» ثم «تثبيت».</li>
+      <li><b>أضف قائمتك:</b> افتح SUL IPTV ← «إضافة قائمة» ← M3U أو Xtream Codes، واكتب بيانات مزوّدك.</li>
+    </ol>
   </div>
 </section>
 
