@@ -1,0 +1,19 @@
+{
+  "release": {
+    "code": 4,
+    "name": "2.0.1",
+    "apk": "SUL.apk",
+    "sha256": "08ff287331e3c01d94d1ead5dd1be8e290bb3c6871df2eecaffcb07616e72015",
+    "notes": [
+      "تحديثات تلقائية من داخل SUL",
+      "إصلاح خدمة زر الرئيسية في نسخة Release"
+    ]
+  },
+  "iptv": {
+    "code": 3,
+    "name": "2.0.0",
+    "apk": "SUL-IPTV.apk",
+    "sha256": "f8150708ec4e38bd3a5ca3959f52734a3412b8f50a7e3856238cb4bc7ff70f5d",
+    "notes": []
+  }
+}
