@@ -3,10 +3,14 @@
     "code": 4,
     "name": "2.0.1",
     "apk": "SUL.apk",
-    "sha256": "08ff287331e3c01d94d1ead5dd1be8e290bb3c6871df2eecaffcb07616e72015",
+    "sha256": "d9f39e9998822449229822745e2e5c9f900c7db3bacb957c353532f32eba3159",
     "notes": [
       "تحديثات تلقائية من داخل SUL",
-      "إصلاح خدمة زر الرئيسية في نسخة Release"
+      "إصلاح خدمة زر الرئيسية"
+    ],
+    "notes_en": [
+      "In-app automatic updates",
+      "Fixed the Home button service"
     ]
   },
   "iptv": {
